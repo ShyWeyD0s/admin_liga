@@ -18,7 +18,7 @@ class GoalController extends Controller
     //consulta eloquent todos los goles con sus equipos y jugadores en la ruta /goals2
     public function index2()
     {
-        $goals2  = Goal::with('teams', 'players')->get();
+        $goals2  = Goal::with('player', 'game')->get();
         return $goals2;
     }
 

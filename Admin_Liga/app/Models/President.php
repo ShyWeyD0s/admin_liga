@@ -12,7 +12,7 @@ class President extends Model
 
     public function team()
     {   
-        // relacion uno a muchos
-        return $this->hasMany(Team::class);
+        // relacion uno a uno
+        return $this->belongsTo(Team::class);
     }
 }
