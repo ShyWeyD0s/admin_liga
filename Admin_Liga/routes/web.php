@@ -31,6 +31,9 @@ Route::get('/teams',
 Route::get('/teams2', 
     [TeamController::class, 'index2']
 );
+Route::get('/teams3', 
+    [TeamController::class, 'index3']
+);
 Route::get('/presidents', 
     [PresidentController::class, 'index']
 );
