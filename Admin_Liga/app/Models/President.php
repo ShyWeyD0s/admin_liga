@@ -9,11 +9,10 @@ class President extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'year', 'team_id'];
 
     public function team()
     {   
-        // relacion uno a uno
-        return $this->belongsTo(Team::class);
+        // relacion uno a muchos
+        return $this->hasMany(Team::class);
     }
 }
