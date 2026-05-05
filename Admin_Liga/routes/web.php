@@ -23,6 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//consultas de los controladores
+
 Route::get('/teams', 
     [TeamController::class, 'index']
 );
