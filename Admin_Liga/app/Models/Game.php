@@ -13,11 +13,13 @@ class Game extends Model
 
     public function teams()
     {
+        // relacion de muchos 
         return $this->belongsToMany(Team::class, 'team_games');
     }
 
     public function goals()
-    {
+    {   
+        // relacion de uno a muchos 
         return $this->hasMany(Goal::class);
     }
 }

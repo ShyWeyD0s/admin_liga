@@ -13,11 +13,15 @@ class Goal extends Model
 
     public function player()
     {
+        // relacion muchos a uno
+
         return $this->belongsTo(Player::class);
     }
 
     public function game()
-    {
+
+    {   
+        // relacion muchos a uno
         return $this->belongsTo(Game::class);
     }
 }

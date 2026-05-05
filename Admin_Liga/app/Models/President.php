@@ -12,7 +12,8 @@ class President extends Model
     protected $fillable = ['name', 'year', 'team_id'];
 
     public function team()
-    {
+    {   
+        // relacion uno a uno
         return $this->belongsTo(Team::class);
     }
 }

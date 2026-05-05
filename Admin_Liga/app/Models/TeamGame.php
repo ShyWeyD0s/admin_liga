@@ -11,5 +11,17 @@ class TeamGame extends Model
 
     protected $table = 'team_games';
 
-    protected $fillable = ['team_id', 'game_id'];
+//Relacion Muchos a uno con game
+public function game()
+{
+    return $this->belongsTo(Game::class);
+}
+
+
+//Relacion Muchos a uno con team
+public function team()
+{
+    return $this->belongsTo(Team::class);
+}
+
 }
