@@ -9,10 +9,7 @@ class Player extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'position', 'team_id'];
-
-    public function team()
-
+    public function team()  
     {
         // relacion muchos a uno
         return $this->belongsTo(Team::class);

@@ -9,8 +9,6 @@ class Game extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['date', 'local_goals', 'away_goals'];
-
     public function teams()
     {
         // relacion de muchos 
@@ -21,5 +19,10 @@ class Game extends Model
     {   
         // relacion de uno a muchos 
         return $this->hasMany(Goal::class);
+    }
+
+    public function teamGames()
+    {
+        return $this->hasMany(TeamGame::class);
     }
 }

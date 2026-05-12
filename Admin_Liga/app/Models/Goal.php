@@ -9,8 +9,6 @@ class Goal extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'player_id', 'game_id'];
-
     public function player()
     {
         // relacion muchos a uno
